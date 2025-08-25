@@ -12,18 +12,18 @@ from strings import get_string, helpers
 
 # Images list (cleaned spaces)
 AARUMI_PIC = [
-    "https://files.catbox.moe/fh7vw7.jpg",
-    "https://files.catbox.moe/lckxh6.jpg",
-    "https://files.catbox.moe/smteo6.jpg",
-    "https://files.catbox.moe/7enu2i.jpg",
-    "https://files.catbox.moe/n6hkvd.jpg",
-    "https://files.catbox.moe/ej1p7t.jpg",
-    "https://files.catbox.moe/fh7vw7.jpg",
-    "https://files.catbox.moe/lckxh6.jpg",
-    "https://files.catbox.moe/smteo6.jpg",
-    "https://files.catbox.moe/7enu2i.jpg",
-    "https://files.catbox.moe/n6hkvd.jpg",
-    "https://files.catbox.moe/ej1p7t.jpg"
+    "https://files.catbox.moe/u7z9lr.jpg",
+    "https://files.catbox.moe/u7z9lr.jpg",
+    "https://files.catbox.moe/u7z9lr.jpg",
+    "https://files.catbox.moe/u7z9lr.jpg",
+    "https://files.catbox.moe/u7z9lr.jpg",
+    "https://files.catbox.moe/u7z9lr.jpg",
+    "https://files.catbox.moe/u7z9lr.jpg",
+    "https://files.catbox.moe/u7z9lr.jpg",
+    "https://files.catbox.moe/u7z9lr.jpg",
+    "https://files.catbox.moe/u7z9lr.jpg",
+    "https://files.catbox.moe/u7z9lr.jpg",
+    "https://files.catbox.moe/u7z9lr.jpg"
 ]
 
 # -------------------- Private Help Command --------------------
@@ -55,6 +55,7 @@ async def helper_private_command(client, update: Union[types.Message, types.Call
             random.choice(AARUMI_PIC),
             caption=_["help_1"].format(SUPPORT_CHAT),
             reply_markup=keyboard,
+            has_spoiler=True
         )
 
 # -------------------- Fixed Callback Help --------------------
@@ -72,7 +73,8 @@ async def helper_private_fixed(client, update: Union[types.Message, types.Callba
         keyboard = first_page(_)
         await update.edit_message_text(
             _["help_1"].format(SUPPORT_CHAT),
-            reply_markup=keyboard
+            reply_markup=keyboard,
+            has_spoiler=True
         )
     else:
         try:
@@ -85,7 +87,8 @@ async def helper_private_fixed(client, update: Union[types.Message, types.Callba
         await update.reply_photo(
             random.choice(AARUMI_PIC),
             caption=_["help_1"].format(SUPPORT_CHAT),
-            reply_markup=keyboard
+            reply_markup=keyboard,
+            has_spoiler=True
         )
 
 # -------------------- Group Help Command --------------------
@@ -125,9 +128,9 @@ async def helper_cb(client, CallbackQuery, _):
 
 # -------------------- Shiv Menu --------------------
 Shiv_Text = (
-    "ᴄʜᴏᴏsᴇ ᴛʜᴇ ᴄᴧᴛᴇɢᴏʀʏ ғᴏʀ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴧɴɴᴧ ɢᴇᴛ ʜᴇʟᴩ.\n"
-    "ᴧsᴋ ʏᴏᴜʀ ᴅᴏᴜʙᴛs ᴧᴛ <a href={0}>sᴜᴘᴘᴏʀᴛ ᴄʜᴧᴛ</a>\n\n"
-    "ᴧʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴧɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ: <code>/</code>"
+    "**ᴄʜᴏᴏsᴇ ᴛʜᴇ ᴄᴧᴛᴇɢᴏʀʏ ꜰᴏʀ ᴡʜɪᴄʜ ʏᴏᴜ ᴡᴧɴɴᴧ ɢᴇᴛ ʜᴇʟᴩ.**\n"
+    "**ᴧsᴋ ʏᴏᴜʀ ᴅᴏᴜʙᴛs ᴧᴛ** <a href={0}>**sᴜᴘᴘᴏʀᴛ ᴄʜᴧᴛ**</a>\n\n"
+    "**ᴧʟʟ ᴄᴏᴍᴍᴀɴᴅs ᴄᴧɴ ʙᴇ ᴜsᴇᴅ ᴡɪᴛʜ:** <code>/</code>"
 )
 
 @app.on_callback_query(filters.regex("shivXaarumi") & ~BANNED_USERS)
