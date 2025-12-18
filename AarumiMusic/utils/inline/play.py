@@ -85,11 +85,30 @@ def stream_markup(_, chat_id):
             InlineKeyboardButton(text="II", callback_data=f"ADMIN Pause|{chat_id}"),
         ],
         [
+            InlineKeyboardButton(text="< -𝟤𝟢s", callback_data="seek_backward_20"),
+               InlineKeyboardButton(text="• ᴘʀᴏᴍᴏ •", url=f"https://t.me/Iamistkhar"),
+            InlineKeyboardButton(text="𝟤𝟢s+ >", callback_data="seek_forward_20")
+        ],
+        [
+            InlineKeyboardButton(text="✚ ʌᴅᴅ ϻє ɪη ʏσυʀ ɢʀσυᴘ ✚", url=f"https://t.me/{app.username}?startgroup=true"),
+        ]
+
+
+     [
             InlineKeyboardButton(text="‣‣I", callback_data=f"ADMIN Skip|{chat_id}"),
             InlineKeyboardButton(text="↻", callback_data=f"ADMIN Replay|{chat_id}"),
             InlineKeyboardButton(text="▢", callback_data=f"ADMIN Stop|{chat_id}"),
         ],
-        [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
+       [
+            InlineKeyboardButton(text="< -𝟤𝟢s", callback_data="seek_backward_20"),
+               InlineKeyboardButton(text="• ᴘʀᴏᴍᴏ •", url=f"https://t.me/Iamistkhar"),
+            InlineKeyboardButton(text="𝟤𝟢s+ >", callback_data="seek_forward_20")
+        ],
+        [
+            InlineKeyboardButton(text="✚ ʌᴅᴅ ϻє ɪη ʏσυʀ ɢʀσυᴘ ✚", url=f"https://t.me/{app.username}?startgroup=true"),
+        ]
+
+ [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data="close")],
     ]
     return buttons
 
